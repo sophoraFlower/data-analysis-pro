@@ -1,4 +1,4 @@
 # Java Practice
 
 ### Basics
-### 
+### Algorithm
