@@ -1,4 +1,4 @@
 # Java 日常练习
 
-### Basics
+### Basics：编程基础
 ### Algorithm
