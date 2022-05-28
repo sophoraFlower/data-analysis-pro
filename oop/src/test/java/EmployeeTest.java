@@ -20,5 +20,8 @@ public class EmployeeTest {
         System.out.println(harry.getClass());  // class Employee
         LocalDate d = harry.getHireDay();
         System.out.println(d);
+
+        int n = Employee.getNextId();
+        System.out.println(n);
     }
 }

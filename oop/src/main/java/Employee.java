@@ -7,6 +7,7 @@ public class Employee {
     private double salary;
     private LocalDate hireDay;
     private final String position;
+    private static int nextId = 1;
 
     public Employee(String n, double s, int year, int month, int day, String position) {
         this.position = position;
@@ -30,6 +31,10 @@ public class Employee {
 
     public String getPosition() {
         return position;
+    }
+
+    public static int getNextId() {
+        return nextId;
     }
 
     public void raiseSalary(double byPercent) {
