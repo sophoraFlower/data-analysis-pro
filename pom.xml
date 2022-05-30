@@ -10,6 +10,7 @@
   <modules>
     <module>date</module>
       <module>oop</module>
+      <module>inheritance</module>
   </modules>
   <packaging>pom</packaging>
 
