@@ -11,6 +11,7 @@
     <module>date</module>
       <module>oop</module>
       <module>inheritance</module>
+      <module>leetcode</module>
   </modules>
   <packaging>pom</packaging>
 
