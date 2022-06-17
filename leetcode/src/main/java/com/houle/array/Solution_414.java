@@ -11,27 +11,31 @@ public class Solution_414 {
         if (nums.length == 2) {
             return Math.max(nums[0], nums[1]);
         }
-        int[] nums_three_max = new int[3];
-        if (nums.length >= 3) {
-            nums_three_max[0] = nums[0];
-            for (int i=1; i<nums.length; i++){
-                for (int j=1; j<3; j++) {
-                    if (nums[i] != nums_three_max[j] ) {
-                        nums_three_max[j] = nums[i];
-                    }
-                    nums_three_max[j] = 0;
-                }
-                for () {
-
-                }
+        int nums_max = Integer.MIN_VALUE;
+        int nums_middle = Integer.MIN_VALUE;
+        int nums_min = Integer.MIN_VALUE;
+        boolean flag = true;
+        int count = 0;
+        for (int i=0; i<nums.length; i++) {
+            if(nums[i]==Integer.MIN_VALUE&&flag){
+                count++;
+                flag=false;
             }
-            for(int i=1; i<nums_three_max.length; i++) {
-                if (nums_three_max[i] == nums_three_max[i-1]) {
-                    return Math.max(Math.max(nums_three_max[0], nums_three_max[1]), nums_three_max[2]);
-                }
+            if (nums[i] > nums_max) {
+                nums_min = nums_middle;
+                nums_middle = nums_max;
+                nums_max = nums[i];
+                count++;
+            } else if (nums[i] < nums_max && nums[i] > nums_middle) {
+                nums_min = nums_middle;
+                nums_middle = nums[i];
+                count++;
+            } else if (nums[i] < nums_middle && nums[i] > nums_min) {
+                nums_min = nums[i];
+                count++;
             }
         }
-        return Math.min(Math.min(nums_three_max[0], nums_three_max[1]), nums_three_max[2]);
+        return count>=3 ? nums_min : nums_max;
     }
 
     public static void main(String[] args) {
@@ -39,10 +43,12 @@ public class Solution_414 {
         int[] nums_01 = {2, 2, 3, 1};
         int[] nums_02 = {3, 2, 1};
         int[] nums_03 = {1, 2};
-        int[] nums_04 = {2, 2, 3, 1};
+        int[] nums_04 = {2, 2, 2};
+        int[] nums_05 = {1,2,-2147483648};
         System.out.println(solution_414.thirdMax(nums_01));
         System.out.println(solution_414.thirdMax(nums_02));
         System.out.println(solution_414.thirdMax(nums_03));
         System.out.println(solution_414.thirdMax(nums_04));
+        System.out.println(solution_414.thirdMax(nums_05));
     }
 }
