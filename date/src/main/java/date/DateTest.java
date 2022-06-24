@@ -10,6 +10,7 @@ public class DateTest {
         System.out.println(s.toString());
         Date deadline;
         deadline = s;
+        System.out.println(deadline);
 
         System.out.println(LocalDate.now());
         System.out.println(LocalDate.of(1999, 12, 31));
