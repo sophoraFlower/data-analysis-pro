@@ -21,5 +21,12 @@ public class ManagerTest {
         for (Employee e : staff) {
             System.out.println("name=" + e.getName() + ",salary=" + e.getSalary());
         }
+
+        Manager boss2 = (Manager) staff[0];
+        if (staff[1] instanceof Manager) {
+            Manager boss3 = (Manager) staff[1];
+            System.out.println(boss3.getBonus());
+        }
+        System.out.println(boss2.getBonus());
     }
 }
