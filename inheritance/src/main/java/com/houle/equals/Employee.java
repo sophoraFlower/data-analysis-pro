@@ -4,9 +4,9 @@ import java.time.LocalDate;
 import java.util.Objects;
 
 public class Employee {
-    private String name;
+    private final String name;
     private double salary;
-    private LocalDate hireDay;
+    private final LocalDate hireDay;
 
     public Employee(String name, double salary, int year, int month, int day)
     {
@@ -36,8 +36,7 @@ public class Employee {
         salary += raise;
     }
 
-    public boolean equals(Object otherObject)
-    {
+    public boolean equals(Object otherObject) {
         // a quick test to see if the objects are identical
         if (this == otherObject) return true;
 
@@ -60,8 +59,7 @@ public class Employee {
         return Objects.hash(name, salary, hireDay);
     }
 
-    public String toString()
-    {
+    public String toString() {
         return getClass().getName() + "[name=" + name + ",salary=" + salary + ",hireDay="
                 + hireDay + "]";
     }
