@@ -1,5 +1,6 @@
 package com.houle.enums;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class EnumTest {
@@ -12,6 +13,9 @@ public class EnumTest {
         System.out.println("abbreviation=" + size.getAbbreviation());
         if (size == Size.EXTRA_LARGE)
             System.out.println("Good job--you paid attention to the _.");
+        System.out.println(Size.MEDIUM.toString());  // MEDIUM
+        System.out.println(Arrays.toString(Size.values()));  // [SMALL, MEDIUM, LARGE, EXTRA_LARGE]
+        System.out.println(Size.LARGE.ordinal());  // 2
     }
 }
 

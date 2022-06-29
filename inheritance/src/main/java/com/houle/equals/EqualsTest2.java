@@ -14,8 +14,5 @@ public class EqualsTest2 {
         System.out.println(e1.equals(e3));  // false
         System.out.println(e1.equals(e4));  // false
         System.out.println(e1.equals(e5));  // false
-
-
-
     }
 }
