@@ -1,11 +1,10 @@
 package com.houle.stack;
 
-
 // 基于数组实现的顺序栈
 public class ArrayStack {
     private final String[] items;  // 数组
     private int count;       // 栈中元素个数
-    private final int n;           //栈的大小
+    private final int n;           // 栈的大小
 
     // 初始化数组，申请一个大小为n的数组空间
     public ArrayStack(int n) {
